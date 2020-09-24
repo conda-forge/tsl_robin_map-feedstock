@@ -1,6 +1,6 @@
 {% set name = "tsl_robin_map" %}
-{% set version = "v0.5.0" %}
-{% set sha256 = " 220be06fa44005af67dc4b49fdfd96a66588b769eb53b0c899c6d8bf77033d84" %}
+{% set version = "0.6.3" %}
+{% set sha256 = "e6654c8c2598f63eb0b1d52ff8bdf39cfcc91d81dd5d05274a6dca91241cd72f" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/Tessil/robin-map/archive/{{ version }}.tar.gz
+  url: https://github.com/Tessil/robin-map/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2000
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -35,8 +35,8 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'C++ fast hash map and hash set using robin hood hashing'
-  description: 'C++ fast hash map and hash set using robin hood hashing'
+  summary: C++ fast hash map and hash set using robin hood hashing
+  description: C++ fast hash map and hash set using robin hood hashing
   doc_url: https://tessil.github.io/robin-map/
   dev_url: https://github.com/Tessil/robin-map
 
