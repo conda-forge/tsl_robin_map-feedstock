@@ -25,11 +25,11 @@ test:
   commands:
     - test -d ${PREFIX}/include/tsl  # [unix]
     - test -f ${PREFIX}/include/tsl/robin_map.h  # [unix]
-    - test -f ${PREFIX}/share/cmake/tsl_robin_map/tsl_robin_mapConfig.cmake  # [unix]
-    - test -f ${PREFIX}/share/cmake/tsl_robin_map/tsl_robin_mapConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\tsl\robin_map.h (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\share\cmake\tsl_robin_mapConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\share\cmake\tsl_robin_mapConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/share/cmake/tsl-robin-map/tsl-robin-mapConfig.cmake  # [unix]
+    - test -f ${PREFIX}/share/cmake/tsl-robin-map/tsl-robin-mapConfigVersion.cmake  # [unix]
+    - if not exist %LIBRARY_PREFIX%\include\tsl\robin_map.h exit 1  # [win]
+    - if not exist %LIBRARY_PREFIX%\share\cmake\tsl-robin-mapConfig.cmake exit 1  # [win]
+    - if not exist %LIBRARY_PREFIX%\share\cmake\tsl-robin-mapConfigVersion.cmake exit 1  # [win]
 
 about:
   home: https://github.com/Tessil/robin-map
