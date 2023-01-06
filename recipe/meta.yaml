@@ -1,6 +1,6 @@
 {% set name = "tsl_robin_map" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "b2ffdb623727cea852a66bddcb7fa6d938538a82b40e48294bb581fe086ef005" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "2b54d2c1de2f73bea5c51d5dcbd64813a08caf1bfddcfdeee40ab74e9599e8e3" %}
 
 package:
   name: {{ name|lower }}
