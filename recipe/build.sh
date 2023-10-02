@@ -1,4 +1,10 @@
 #!/bin/bash
+set -ex
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX $SRC_DIR -DCMAKE_INSTALL_LIBDIR=lib
+mkdir -p build
+pushd build
+cmake ${CMAKE_ARGS} ..
+make -j${CPU_COUNT}
+
 make install
+popd
