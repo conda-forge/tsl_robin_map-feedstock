@@ -1,19 +1,16 @@
-{% set name = "tsl_robin_map" %}
 {% set version = "1.2.1" %}
 {% set sha256 = "2b54d2c1de2f73bea5c51d5dcbd64813a08caf1bfddcfdeee40ab74e9599e8e3" %}
 
 package:
-  name: {{ name|lower }}
+  name: tsl_robin_map
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/Tessil/robin-map/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 1
-  skip: true  # [win and vc<14]
 
 requirements:
   build:
