@@ -1,5 +1,5 @@
-{% set version = "1.2.1" %}
-{% set sha256 = "2b54d2c1de2f73bea5c51d5dcbd64813a08caf1bfddcfdeee40ab74e9599e8e3" %}
+{% set version = "1.2.2" %}
+{% set sha256 = "c72767ecea2a90074c7efbe91620c8f955af666505e22782e82813c652710821" %}
 
 package:
   name: tsl_robin_map
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
