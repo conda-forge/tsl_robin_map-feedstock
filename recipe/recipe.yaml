@@ -1,0 +1,47 @@
+context:
+  version: "1.4.1"
+  build_number: 0
+
+package:
+  name: tsl_robin_map
+  version: ${{ version }}
+
+source:
+  url: https://github.com/Tessil/robin-map/archive/v${{ version }}.tar.gz
+  sha256: 0e3f53a377fdcdc5f9fed7a4c0d4f99e82bbb64175233bd13427fef9a771f4a1
+
+build:
+  number: ${{ build_number }}
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
+    - cmake
+    - if: unix
+      then:
+        - make
+
+tests:
+  - package_contents:
+      files:
+        exists:
+          - ${{ "Library/" if win }}include/tsl/robin_map.h
+          - ${{ "Library/" if win }}/share/cmake/tsl-robin-map/tsl-robin-mapConfig.cmake
+          - ${{ "Library/" if win }}/share/cmake/tsl-robin-map/tsl-robin-mapConfigVersion.cmake
+
+about:
+  homepage: https://github.com/Tessil/robin-map
+  repository: https://github.com/Tessil/robin-map
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: C++ fast hash map and hash set using robin hood hashing
+  description: C++ fast hash map and hash set using robin hood hashing
+  documentation: https://tessil.github.io/robin-map/
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - JohanMabille
+    - mfansler
