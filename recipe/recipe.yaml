@@ -27,8 +27,8 @@ tests:
       files:
         exists:
           - ${{ "Library/" if win }}include/tsl/robin_map.h
-          - ${{ "Library/" if win }}/share/cmake/tsl-robin-map/tsl-robin-mapConfig.cmake
-          - ${{ "Library/" if win }}/share/cmake/tsl-robin-map/tsl-robin-mapConfigVersion.cmake
+          - ${{ "Library/" if win }}share/cmake/tsl-robin-map/tsl-robin-mapConfig.cmake
+          - ${{ "Library/" if win }}share/cmake/tsl-robin-map/tsl-robin-mapConfigVersion.cmake
 
 about:
   homepage: https://github.com/Tessil/robin-map
